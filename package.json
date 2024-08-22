@@ -15,10 +15,31 @@
   ],
   "main": "./extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "vstimeSidebar",
+          "title": "VSTime",
+          "icon": "resources/icons8-timer-48.png"
+        }
+      ]
+    },
+    "views": {
+      "vstimeSidebar": [
+        {
+          "id": "vstimeView",
+          "name": "Project Time Statistics"
+        }
+      ]
+    },
     "commands": [
       {
+        "command": "extension.openStatsTab",
+        "title": "Open Stats Tab"
+      },
+      {
         "command": "extension.showTimeStats",
-        "title": "Show Time Statistics"
+        "title": "Show Time Stats"
       }
     ]
   },
